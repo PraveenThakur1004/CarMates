@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="JSQMessagesToolbarContentView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myo-1S-Vg1" userLabel="Right button container">
+                    <rect key="frame" x="275" y="7" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Bpb-aJ-3V2"/>
+                        <constraint firstAttribute="width" constant="40" id="dbm-24-cma"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYX-c1-W7B">
+                    <rect key="frame" x="12" y="8" width="258" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEq-G7-jGt" userLabel="Left button container">
+                            <rect key="frame" x="218" y="3" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="gEg-s3-0GD"/>
+                                <constraint firstAttribute="width" constant="34" id="u06-sz-hRh"/>
+                            </constraints>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm4-NT-mvr" customClass="JSQMessagesComposerTextView">
+                            <rect key="frame" x="8" y="2" width="202" height="36"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="LEq-G7-jGt" secondAttribute="trailing" constant="6" id="4w3-cU-sSn"/>
+                        <constraint firstAttribute="bottom" secondItem="dm4-NT-mvr" secondAttribute="bottom" constant="2" id="DxT-Dt-fZH"/>
+                        <constraint firstItem="dm4-NT-mvr" firstAttribute="top" secondItem="dYX-c1-W7B" secondAttribute="top" constant="2" id="IBm-ei-8b4"/>
+                        <constraint firstItem="LEq-G7-jGt" firstAttribute="leading" secondItem="dm4-NT-mvr" secondAttribute="trailing" constant="8" id="Vhc-sE-gee"/>
+                        <constraint firstItem="dm4-NT-mvr" firstAttribute="leading" secondItem="dYX-c1-W7B" secondAttribute="leading" constant="8" id="ap7-hv-dkc"/>
+                        <constraint firstAttribute="bottom" secondItem="LEq-G7-jGt" secondAttribute="bottom" constant="3" id="mcJ-zS-g4Q"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.21960784310000001" green="0.4039215686" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Myo-1S-Vg1" secondAttribute="bottom" constant="8" id="Mw2-9t-adX"/>
+                <constraint firstAttribute="bottom" secondItem="dYX-c1-W7B" secondAttribute="bottom" constant="7" id="VPd-k5-pcy"/>
+                <constraint firstItem="dYX-c1-W7B" firstAttribute="top" secondItem="1" secondAttribute="top" constant="8" id="Yon-EP-Mkg"/>
+                <constraint firstItem="Myo-1S-Vg1" firstAttribute="leading" secondItem="dYX-c1-W7B" secondAttribute="trailing" constant="5" id="f1A-vM-vbb"/>
+                <constraint firstAttribute="trailing" secondItem="Myo-1S-Vg1" secondAttribute="trailing" constant="5" id="lPW-1Q-qcJ"/>
+                <constraint firstItem="dYX-c1-W7B" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="12" id="oY5-ZK-Tiw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftBarButtonContainerView" destination="LEq-G7-jGt" id="F0V-4N-1Mo"/>
+                <outlet property="rightBarButtonContainerView" destination="Myo-1S-Vg1" id="0SR-cw-EkD"/>
+                <outlet property="textView" destination="dm4-NT-mvr" id="PFw-HO-oT8"/>
+            </connections>
+            <point key="canvasLocation" x="268" y="547.5"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
